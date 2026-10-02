@@ -98,3 +98,23 @@ if (tourMode) {
   tourMode.addEventListener("click", () => frame?.requestFullscreen?.());
 }
 
+
+// Filter rooms without resetting each room's selected photo.
+const placeCards = [...document.querySelectorAll('[data-place-category]')];
+document.querySelectorAll('[data-place-filter]').forEach(button => {
+  button.addEventListener('click', () => {
+    const category = button.dataset.placeFilter;
+    document.querySelectorAll('[data-place-filter]').forEach(item => {
+      const selected = item === button;
+      item.classList.toggle('is-selected', selected);
+      item.setAttribute('aria-pressed', String(selected));
+    });
+    let count = 0;
+    placeCards.forEach(card => {
+      card.hidden = category !== 'all' && card.dataset.placeCategory !== category;
+      if (!card.hidden) count++;
+    });
+    const counter = document.querySelector('[data-places-count]');
+    if (counter) counter.textContent = count + ' พื้นที่การเรียนรู้';
+  });
+});
