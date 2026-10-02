@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#009c4b">
+  <meta name="description" content="เลือกชมภาพและบรรยากาศของสถานที่ภายในโรงเรียนสหวิทยานุสรณ์">
+  <title>สถานที่ภายในโรงเรียน — สหวิทยานุสรณ์</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body class="page-places">
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="โรงเรียนสหวิทยานุสรณ์ หน้าแรก">
+    <span class="brand-mark" aria-hidden="true"><img src="assets/school-seal.png" alt=""></span>
+    <span class="brand-copy"><strong>สหวิทยานุสรณ์</strong><small>SCHOOL CAMPUS GUIDE</small></span>
+  </a>
+  <nav class="site-nav" id="siteNav" aria-label="เมนูหลัก">
+      <a href="index.html">เกี่ยวกับโรงเรียน</a>
+      <a class="active" aria-current="page" href="places.html">สถานที่ภายในโรงเรียน</a>
+      <a href="explore.html">สำรวจพื้นที่</a>
+      <a href="personnel.html">บุคลากร</a>
+  </nav>
+  <div class="header-actions">
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="เมนูหลัก" aria-expanded="false" aria-controls="siteNav">
+      <span class="menu-lines" aria-hidden="true"><i></i><i></i></span><span>เมนู</span>
+    </button>
+  </div>
+</header>
+<main class="page-shell page-places">
+  <section class="places-hero" aria-labelledby="placesTitle">
+    <div>
+      <span class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span> CAMPUS SPACES</span>
+      <h1 id="placesTitle">พื้นที่ที่พร้อม<br><em>ให้เรียนรู้ทุกวัน</em></h1>
+    </div>
+    <p>เลือกการ์ดเพื่อชมภาพสถานที่ แต่ละการ์ดเลื่อนดูภาพเพิ่มเติมได้เมื่อมีภาพหลายมุม</p>
+  </section>
+
+  <section class="gallery-grid" aria-label="แกลเลอรีสถานที่ภายในโรงเรียน">
+    <article class="space-card">
+      <div class="space-gallery" data-gallery tabindex="0" aria-label="แกลเลอรีทางเชื่อมอาคารเรียน">
+        <div class="gallery-track">
+          <img class="gallery-slide" src="assets/school-walkway-360.webp" alt="มุมทางเชื่อมอาคารเรียนและพื้นที่รอบโรงเรียน ภาพพาโนรามาตัวอย่าง">
+          <img class="gallery-slide" src="assets/school-walkway-next-360.webp" alt="อีกมุมหนึ่งของทางเชื่อมอาคารเรียน ภาพพาโนรามาตัวอย่าง">
+        </div>
+        <button class="gallery-control gallery-prev" type="button" data-gallery-prev aria-label="ภาพก่อนหน้า">‹</button>
+        <button class="gallery-control gallery-next" type="button" data-gallery-next aria-label="ภาพถัดไป">›</button>
+        <div class="gallery-status"><span class="gallery-sample">ภาพทดลองถ่าย 360°</span><span class="gallery-counter" data-gallery-counter aria-live="polite">01 / 02</span></div>
+        <div class="gallery-dots" data-gallery-dots aria-label="เลือกภาพ"></div>
+      </div>
+      <div class="space-card-copy">
+        <span class="space-card-kicker">อาคารเรียน · 2 มุม</span>
+        <h2>ทางเชื่อมอาคารเรียน</h2>
+        <p>ภาพทดลองถ่ายจริง 360° สองจุด เชื่อมต่อไปยังทัวร์เดินชมได้</p>
+        <a href="explore.html" class="space-card-link">เปิดทัวร์ 360° <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+
+    <article class="space-card">
+      <div class="space-gallery" data-gallery tabindex="0" aria-label="แกลเลอรีพื้นที่การเรียนรู้">
+        <div class="gallery-track">
+          <img class="gallery-slide" src="assets/classroom.webp" alt="ภาพตัวอย่างห้องเรียน">
+          <img class="gallery-slide" src="assets/library.webp" alt="ภาพตัวอย่างห้องสมุด">
+        </div>
+        <button class="gallery-control gallery-prev" type="button" data-gallery-prev aria-label="ภาพก่อนหน้า">‹</button>
+        <button class="gallery-control gallery-next" type="button" data-gallery-next aria-label="ภาพถัดไป">›</button>
+        <div class="gallery-status"><span class="gallery-sample">ภาพประกอบตัวอย่าง</span><span class="gallery-counter" data-gallery-counter aria-live="polite">01 / 02</span></div>
+        <div class="gallery-dots" data-gallery-dots aria-label="เลือกภาพ"></div>
+      </div>
+      <div class="space-card-copy">
+        <span class="space-card-kicker">พื้นที่การเรียนรู้ · 2 ภาพตัวอย่าง</span>
+        <h2>ห้องเรียนและมุมค้นคว้า</h2>
+        <p>ปัดเพื่อดูบรรยากาศตัวอย่างของพื้นที่เรียนและแหล่งค้นคว้า</p>
+        <a href="personnel.html" class="space-card-link">รู้จักทีมผู้ดูแลการเรียนรู้ <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+
+    <article class="space-card">
+      <div class="space-gallery" data-gallery tabindex="0" aria-label="แกลเลอรีสนามกีฬาและกิจกรรม">
+        <div class="gallery-track">
+          <img class="gallery-slide" src="assets/sports-court.webp" alt="ภาพตัวอย่างสนามกีฬาในร่ม">
+          <img class="gallery-slide" src="assets/campus-courtyard.webp" alt="ภาพตัวอย่างลานกิจกรรมภายนอก">
+        </div>
+        <button class="gallery-control gallery-prev" type="button" data-gallery-prev aria-label="ภาพก่อนหน้า">‹</button>
+        <button class="gallery-control gallery-next" type="button" data-gallery-next aria-label="ภาพถัดไป">›</button>
+        <div class="gallery-status"><span class="gallery-sample">ภาพประกอบตัวอย่าง</span><span class="gallery-counter" data-gallery-counter aria-live="polite">01 / 02</span></div>
+        <div class="gallery-dots" data-gallery-dots aria-label="เลือกภาพ"></div>
+      </div>
+      <div class="space-card-copy">
+        <span class="space-card-kicker">กิจกรรม · 2 ภาพตัวอย่าง</span>
+        <h2>กีฬาและกิจกรรม</h2>
+        <p>พื้นที่สำหรับกิจกรรมร่วมกัน การออกกำลังกาย และการใช้เวลานอกห้องเรียน</p>
+        <a href="explore.html" class="space-card-link">สำรวจพื้นที่ต่อ <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+  </section>
+
+  <aside class="gallery-note"><span aria-hidden="true">i</span><p>ภาพห้องเรียน ห้องสมุด และสนามกีฬาในหน้านี้เป็นภาพตัวอย่าง ใช้แทนด้วยภาพจริงของโรงเรียนได้ การเพิ่มหลายรูปในแกลเลอรีเดียวกันจะเปิดให้เลื่อนดูด้วยปุ่มหรือปัดบนจอสัมผัส</p></aside>
+</main>
+<footer class="site-footer">
+  <span>© 2026 โรงเรียนสหวิทยานุสรณ์</span>
+  <span>ภาพประกอบบางส่วนเป็นภาพตัวอย่าง รอแทนที่ด้วยภาพจริงของโรงเรียน</span>
+</footer>
+</body>
+</html>
