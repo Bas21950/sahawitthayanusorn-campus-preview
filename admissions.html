@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#009c4b">
-  <meta name="description" content="ทำความรู้จักผู้บริหาร ครู และบุคลากรของโรงเรียนสหวิทยานุสรณ์">
-  <title>บุคลากร — สหวิทยานุสรณ์</title>
+  <meta name="description" content="แบบฟอร์มสมัครเรียนออนไลน์ โรงเรียนสหวิทยานุสรณ์">
+  <title>สมัครเรียน — สหวิทยานุสรณ์</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
-<body class="page-personnel">
+<body class="page-admissions">
 <header class="site-header">
   <a class="brand" href="index.html" aria-label="โรงเรียนสหวิทยานุสรณ์ หน้าแรก">
     <span class="brand-mark" aria-hidden="true"><img src="assets/school-seal.png" alt=""></span>
@@ -22,8 +22,8 @@
       <a href="index.html">เกี่ยวกับโรงเรียน</a>
       <a href="places.html">สถานที่ภายในโรงเรียน</a>
       <a href="explore.html">สำรวจพื้นที่</a>
-      <a class="active" aria-current="page" href="personnel.html">บุคลากร</a>
-      <a class="nav-apply" href="admissions.html">สมัครเรียน <span aria-hidden="true">↗</span></a>
+      <a href="personnel.html">บุคลากร</a>
+      <a class="nav-apply active" aria-current="page" href="admissions.html">สมัครเรียน <span aria-hidden="true">↗</span></a>
   </nav>
   <div class="header-actions">
     <button class="menu-toggle" id="menuToggle" type="button" aria-label="เมนูหลัก" aria-expanded="false" aria-controls="siteNav">
@@ -31,18 +31,22 @@
     </button>
   </div>
 </header>
-<main class="page-shell personnel-page">
-  <section class="personnel-hero" aria-labelledby="personnelTitle">
-    <h1 id="personnelTitle">บุคลากร</h1>
+
+<main class="admissions-shell">
+  <section class="admissions-hero admissions-hero-compact" aria-labelledby="admissionsTitle">
+    <h1 id="admissionsTitle">สมัครเรียน</h1>
   </section>
 
-  <section class="personnel-section personnel-section-compact" aria-labelledby="teamTitle">
-    <div class="section-heading">
-      <div><h2 id="teamTitle">ผู้บริหารและทีมงาน</h2></div>
+  <section class="admission-form-card admission-form-card-compact" aria-label="แบบฟอร์มสมัครเรียน">
+    <div class="admission-form-embed-wrap">
+      <iframe class="admission-google-form" title="แบบฟอร์มสมัครเรียน โรงเรียนสหวิทยานุสรณ์" src="https://docs.google.com/forms/d/e/1FAIpQLSevgqD0wA_etMk50LBvqg8jz8vkEnXEpN-KNYwkr4vrWN9HoQ/viewform?embedded=true" width="100%" height="1400" frameborder="0" marginheight="0" marginwidth="0" loading="eager">กำลังโหลดแบบฟอร์ม…</iframe>
     </div>
-    <p class="personnel-empty">กำลังรวบรวมรายชื่อและภาพ</p>
+    <div class="admission-form-actions admission-form-actions-compact">
+      <a class="admission-secondary-link" href="https://docs.google.com/forms/d/e/1FAIpQLSevgqD0wA_etMk50LBvqg8jz8vkEnXEpN-KNYwkr4vrWN9HoQ/viewform" target="_blank" rel="noopener">เปิดฟอร์มในหน้าใหม่ <span aria-hidden="true">↗</span></a>
+    </div>
   </section>
 </main>
+
 <footer class="site-footer">
   <span>© 2026 โรงเรียนสหวิทยานุสรณ์</span>
 </footer>

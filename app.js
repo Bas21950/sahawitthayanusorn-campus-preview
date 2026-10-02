@@ -97,3 +97,4 @@ if (tourMode) {
   const frame = document.querySelector(".campus-tour-embed");
   tourMode.addEventListener("click", () => frame?.requestFullscreen?.());
 }
+
