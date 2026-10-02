@@ -995,7 +995,7 @@ h1 em { color: var(--accent); font-style: normal; }
   .site-nav a.nav-apply,
   .site-nav a.nav-apply.active,
   .site-nav a.nav-apply:hover {
-    grid-column: 1 / -1;
+    grid-column: auto;
     min-height: 50px;
     padding: 0 14px;
     justify-content: space-between;
@@ -1118,17 +1118,24 @@ h1 em { color: var(--accent); font-style: normal; }
 }
 
 /* Single-row mobile navigation with concise labels and a clear application action. */
-@media (max-width: 700px) {
+@media (max-width: 920px) {
   .site-header {
     width: calc(100% - 20px);
-    padding: 10px 8px;
-    gap: 8px;
+    padding: 10px 10px 6px;
+    gap: 6px;
+    border-radius: 14px;
   }
+
+  .site-header .brand { min-width: 0; gap: 8px; }
+  .site-header .brand-mark { width: 30px; height: 30px; }
+  .site-header .brand-copy strong { font-size: 14px; }
 
   .site-nav {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 4px;
+    gap: 3px;
+    padding-top: 5px;
+    border-top: 1px solid var(--line);
   }
 
   .site-nav a,
@@ -1139,16 +1146,18 @@ h1 em { color: var(--accent); font-style: normal; }
     width: auto;
     min-width: 0;
     min-height: 44px;
+    grid-column: auto;
+    grid-row: auto;
     margin: 0;
     padding: 0 3px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #e6ece7;
-    border-radius: 12px;
-    background: #f8faf8;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
     color: #46564b;
-    font-size: clamp(10px, 3vw, 12px);
+    font-size: clamp(11px, 3vw, 13px);
     font-weight: 500;
     line-height: 1.1;
     text-align: center;
@@ -1156,19 +1165,30 @@ h1 em { color: var(--accent); font-style: normal; }
   }
 
   .site-nav a.active:not(.nav-apply) {
-    border-color: #c7dece;
-    background: var(--pine-soft);
+    background: transparent;
     color: var(--pine);
     font-weight: 600;
+  }
+
+  .site-nav a.active:not(.nav-apply)::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    bottom: 2px;
+    left: 12px;
+    display: block;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--brand-green);
   }
 
   .site-nav a.nav-apply,
   .site-nav a.nav-apply.active,
   .site-nav a.nav-apply:hover {
-    border-color: var(--pine);
-    border-radius: 14px;
-    background: var(--brand-green);
-    color: #102b1b;
+    border: 1px solid #c7dece;
+    border-radius: 8px;
+    background: var(--pine-soft);
+    color: var(--pine);
     font-weight: 600;
   }
 
