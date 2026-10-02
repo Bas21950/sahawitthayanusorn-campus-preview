@@ -19,11 +19,11 @@
     <span class="brand-copy"><strong>สหวิทยานุสรณ์</strong></span>
   </a>
   <nav class="site-nav" id="siteNav" aria-label="เมนูหลัก">
-      <a href="index.html">เกี่ยวกับโรงเรียน</a>
-      <a class="active" aria-current="page" href="places.html">สถานที่ภายในโรงเรียน</a>
-      <a href="explore.html">สำรวจพื้นที่</a>
-      <a href="personnel.html">บุคลากร</a>
-      <a class="nav-apply" href="admissions.html">สมัครเรียน <span aria-hidden="true">↗</span></a>
+      <a aria-label="เกี่ยวกับโรงเรียน" href="index.html"><span class="nav-label-full">เกี่ยวกับโรงเรียน</span><span class="nav-label-short" aria-hidden="true">เกี่ยวกับ</span></a>
+      <a class="active" aria-current="page" aria-label="สถานที่ภายในโรงเรียน" href="places.html"><span class="nav-label-full">สถานที่ภายในโรงเรียน</span><span class="nav-label-short" aria-hidden="true">สถานที่</span></a>
+      <a aria-label="สำรวจพื้นที่ 360 องศา" href="explore.html"><span class="nav-label-full">สำรวจพื้นที่</span><span class="nav-label-short" aria-hidden="true">ชม 360°</span></a>
+      <a aria-label="บุคลากร" href="personnel.html"><span class="nav-label-full">บุคลากร</span><span class="nav-label-short" aria-hidden="true">บุคลากร</span></a>
+      <a class="nav-apply" aria-label="สมัครเรียน" href="admissions.html"><span class="nav-label-full">สมัครเรียน</span><span class="nav-label-short" aria-hidden="true">สมัครเรียน</span><span aria-hidden="true">↗</span></a>
   </nav>
   <div class="header-actions">
     <button class="menu-toggle" id="menuToggle" type="button" aria-label="เมนูหลัก" aria-expanded="false" aria-controls="siteNav">
@@ -36,57 +36,187 @@
     <div>
       <h1 id="placesTitle">สถานที่ภายในโรงเรียน</h1>
     </div>
-    <p>เลือกภาพเพื่อดูมุมอื่น · ภาพบางส่วนเป็นภาพประกอบ</p>
+    <p>ห้องเรียนและพื้นที่ฝึกทักษะ ที่นักเรียนได้ลงมือเรียนรู้</p>
   </section>
 
   <section class="gallery-grid" aria-label="แกลเลอรีสถานที่ภายในโรงเรียน">
     <article class="space-card">
-      <div class="space-gallery" data-gallery tabindex="0" aria-label="แกลเลอรีทางเชื่อมอาคารเรียน">
+      <div class="space-gallery" data-gallery tabindex="0" aria-label="ภาพห้องเรียนปฐมวัย">
         <div class="gallery-track">
-          <img class="gallery-slide" src="assets/school-walkway-360.webp" alt="มุมทางเชื่อมอาคารเรียนและพื้นที่รอบโรงเรียน">
-          <img class="gallery-slide" src="assets/school-walkway-next-360.webp" alt="อีกมุมหนึ่งของทางเชื่อมอาคารเรียน">
+          <img class="gallery-slide" src="assets/places/kindergarten-01.webp" alt="เด็กปฐมวัยเรียนรู้ผ่านกิจกรรมที่โต๊ะในห้องเรียน" loading="lazy">
+          <img class="gallery-slide" src="assets/places/kindergarten-02.webp" alt="เด็กปฐมวัยทำกิจกรรมจับคู่รูปทรงกับคุณครู" loading="lazy">
         </div>
         <button class="gallery-control gallery-prev" type="button" data-gallery-prev aria-label="ภาพก่อนหน้า">‹</button>
         <button class="gallery-control gallery-next" type="button" data-gallery-next aria-label="ภาพถัดไป">›</button>
-        <div class="gallery-status"><span class="gallery-sample">ภาพทดลองถ่าย 360°</span><span class="gallery-counter" data-gallery-counter aria-live="polite">01 / 02</span></div>
+        <div class="gallery-status"><span class="gallery-sample">ภาพตัวอย่าง</span><span class="gallery-counter" data-gallery-counter aria-live="polite">01 / 02</span></div>
         <div class="gallery-dots" data-gallery-dots aria-label="เลือกภาพ"></div>
       </div>
       <div class="space-card-copy">
-        <h2>ทางเชื่อมอาคารเรียน</h2>
-        <p>ภาพ 360° จากจุดถ่ายจริง 2 จุด</p>
-        <a href="explore.html" class="space-card-link">เปิดทัวร์ 360° <span aria-hidden="true">↗</span></a>
+        <span class="space-card-kicker">ระดับปฐมวัย</span>
+        <h2>ห้องเรียนปฐมวัย</h2>
+        <p>เรียนรู้ผ่านการเล่น สำรวจ และทำกิจกรรมร่วมกัน</p>
       </div>
     </article>
 
     <article class="space-card">
-      <div class="space-gallery" data-gallery tabindex="0" aria-label="แกลเลอรีพื้นที่การเรียนรู้">
+      <div class="space-gallery" data-gallery tabindex="0" aria-label="ภาพห้องเรียนทั่วไป">
         <div class="gallery-track">
-          <img class="gallery-slide" src="assets/classroom.webp" alt="ภาพตัวอย่างห้องเรียน">
-          <img class="gallery-slide" src="assets/library.webp" alt="ภาพตัวอย่างห้องสมุด">
+          <img class="gallery-slide" src="assets/places/classroom-01.webp" alt="คุณครูช่วยนักเรียนทำแบบฝึกหัดในชั้นเรียน" loading="lazy">
+          <img class="gallery-slide" src="assets/places/classroom-02.webp" alt="นักเรียนตั้งใจเรียนและจดบันทึกในห้องเรียน" loading="lazy">
         </div>
         <button class="gallery-control gallery-prev" type="button" data-gallery-prev aria-label="ภาพก่อนหน้า">‹</button>
         <button class="gallery-control gallery-next" type="button" data-gallery-next aria-label="ภาพถัดไป">›</button>
-        <div class="gallery-status"><span class="gallery-counter" data-gallery-counter aria-live="polite">01 / 02</span></div>
+        <div class="gallery-status"><span class="gallery-sample">ภาพตัวอย่าง</span><span class="gallery-counter" data-gallery-counter aria-live="polite">01 / 02</span></div>
         <div class="gallery-dots" data-gallery-dots aria-label="เลือกภาพ"></div>
       </div>
       <div class="space-card-copy">
-        <h2>ห้องเรียนและมุมค้นคว้า</h2>
+        <span class="space-card-kicker">การเรียนรู้รายวิชา</span>
+        <h2>ห้องเรียนทั่วไป</h2>
+        <p>พื้นที่เรียนรู้และแลกเปลี่ยนความคิดในแต่ละวัน</p>
       </div>
     </article>
 
     <article class="space-card">
-      <div class="space-gallery" data-gallery tabindex="0" aria-label="แกลเลอรีสนามกีฬาและกิจกรรม">
+      <div class="space-gallery" data-gallery tabindex="0" aria-label="ภาพห้องคอมพิวเตอร์">
         <div class="gallery-track">
-          <img class="gallery-slide" src="assets/sports-court.webp" alt="ภาพตัวอย่างสนามกีฬาในร่ม">
-          <img class="gallery-slide" src="assets/campus-courtyard.webp" alt="ภาพตัวอย่างลานกิจกรรมภายนอก">
+          <img class="gallery-slide" src="assets/places/computer-lab-01.webp" alt="นักเรียนใช้คอมพิวเตอร์ทำกิจกรรมเป็นคู่ โดยมีคุณครูให้คำแนะนำ" loading="lazy">
+          <img class="gallery-slide" src="assets/places/computer-lab-02.webp" alt="นักเรียนฝึกใช้คอมพิวเตอร์ในห้องปฏิบัติการ" loading="lazy">
         </div>
         <button class="gallery-control gallery-prev" type="button" data-gallery-prev aria-label="ภาพก่อนหน้า">‹</button>
         <button class="gallery-control gallery-next" type="button" data-gallery-next aria-label="ภาพถัดไป">›</button>
-        <div class="gallery-status"><span class="gallery-counter" data-gallery-counter aria-live="polite">01 / 02</span></div>
+        <div class="gallery-status"><span class="gallery-sample">ภาพตัวอย่าง</span><span class="gallery-counter" data-gallery-counter aria-live="polite">01 / 02</span></div>
         <div class="gallery-dots" data-gallery-dots aria-label="เลือกภาพ"></div>
       </div>
       <div class="space-card-copy">
-        <h2>กีฬาและกิจกรรม</h2>
+        <span class="space-card-kicker">เทคโนโลยี</span>
+        <h2>ห้องคอมพิวเตอร์</h2>
+        <p>ฝึกใช้เทคโนโลยีและค้นคว้าข้อมูลอย่างสร้างสรรค์</p>
+      </div>
+    </article>
+
+    <article class="space-card">
+      <div class="space-gallery" data-gallery tabindex="0" aria-label="ภาพห้องปฏิบัติการวิทยาศาสตร์">
+        <div class="gallery-track">
+          <img class="gallery-slide" src="assets/places/science-lab-01.webp" alt="นักเรียนทดลองวิทยาศาสตร์โดยมีคุณครูดูแล" loading="lazy">
+          <img class="gallery-slide" src="assets/places/science-lab-02.webp" alt="นักเรียนสังเกตตัวอย่างด้วยกล้องจุลทรรศน์" loading="lazy">
+        </div>
+        <button class="gallery-control gallery-prev" type="button" data-gallery-prev aria-label="ภาพก่อนหน้า">‹</button>
+        <button class="gallery-control gallery-next" type="button" data-gallery-next aria-label="ภาพถัดไป">›</button>
+        <div class="gallery-status"><span class="gallery-sample">ภาพตัวอย่าง</span><span class="gallery-counter" data-gallery-counter aria-live="polite">01 / 02</span></div>
+        <div class="gallery-dots" data-gallery-dots aria-label="เลือกภาพ"></div>
+      </div>
+      <div class="space-card-copy">
+        <span class="space-card-kicker">วิทยาศาสตร์</span>
+        <h2>ห้องปฏิบัติการวิทยาศาสตร์</h2>
+        <p>ตั้งคำถาม ทดลอง และเรียนรู้จากการลงมือทำ</p>
+      </div>
+    </article>
+
+    <article class="space-card">
+      <div class="space-gallery" data-gallery tabindex="0" aria-label="ภาพห้องสมุด">
+        <div class="gallery-track">
+          <img class="gallery-slide" src="assets/places/library-01.webp" alt="นักเรียนอ่านและค้นคว้าหนังสือในห้องสมุด" loading="lazy">
+          <img class="gallery-slide" src="assets/places/library-02.webp" alt="นักเรียนเลือกหนังสือและอ่านร่วมกันที่โต๊ะ" loading="lazy">
+        </div>
+        <button class="gallery-control gallery-prev" type="button" data-gallery-prev aria-label="ภาพก่อนหน้า">‹</button>
+        <button class="gallery-control gallery-next" type="button" data-gallery-next aria-label="ภาพถัดไป">›</button>
+        <div class="gallery-status"><span class="gallery-sample">ภาพตัวอย่าง</span><span class="gallery-counter" data-gallery-counter aria-live="polite">01 / 02</span></div>
+        <div class="gallery-dots" data-gallery-dots aria-label="เลือกภาพ"></div>
+      </div>
+      <div class="space-card-copy">
+        <span class="space-card-kicker">อ่านและค้นคว้า</span>
+        <h2>ห้องสมุด</h2>
+        <p>พื้นที่ค้นคว้าความรู้และอ่านหนังสือร่วมกัน</p>
+      </div>
+    </article>
+
+    <article class="space-card">
+      <div class="space-gallery" data-gallery tabindex="0" aria-label="ภาพห้อง STEM และหุ่นยนต์">
+        <div class="gallery-track">
+          <img class="gallery-slide" src="assets/places/steam-lab-01.webp" alt="นักเรียนร่วมกันประกอบหุ่นยนต์เพื่อการเรียนรู้" loading="lazy">
+          <img class="gallery-slide" src="assets/places/steam-lab-02.webp" alt="นักเรียนทดสอบหุ่นยนต์และปรับปรุงผลงานกับเพื่อน" loading="lazy">
+        </div>
+        <button class="gallery-control gallery-prev" type="button" data-gallery-prev aria-label="ภาพก่อนหน้า">‹</button>
+        <button class="gallery-control gallery-next" type="button" data-gallery-next aria-label="ภาพถัดไป">›</button>
+        <div class="gallery-status"><span class="gallery-sample">ภาพตัวอย่าง</span><span class="gallery-counter" data-gallery-counter aria-live="polite">01 / 02</span></div>
+        <div class="gallery-dots" data-gallery-dots aria-label="เลือกภาพ"></div>
+      </div>
+      <div class="space-card-copy">
+        <span class="space-card-kicker">คิดและสร้าง</span>
+        <h2>ห้องปฏิบัติการ STEM</h2>
+        <p>ออกแบบ ทดลอง และสร้างชิ้นงานร่วมกัน</p>
+      </div>
+    </article>
+
+    <article class="space-card">
+      <div class="space-gallery" data-gallery tabindex="0" aria-label="ภาพห้องศิลปะ">
+        <div class="gallery-track">
+          <img class="gallery-slide" src="assets/places/art-room-01.webp" alt="นักเรียนสร้างสรรค์ผลงานศิลปะในห้องเรียน" loading="lazy">
+          <img class="gallery-slide" src="assets/places/art-room-02.webp" alt="คุณครูให้คำแนะนำระหว่างนักเรียนวาดภาพ" loading="lazy">
+        </div>
+        <button class="gallery-control gallery-prev" type="button" data-gallery-prev aria-label="ภาพก่อนหน้า">‹</button>
+        <button class="gallery-control gallery-next" type="button" data-gallery-next aria-label="ภาพถัดไป">›</button>
+        <div class="gallery-status"><span class="gallery-sample">ภาพตัวอย่าง</span><span class="gallery-counter" data-gallery-counter aria-live="polite">01 / 02</span></div>
+        <div class="gallery-dots" data-gallery-dots aria-label="เลือกภาพ"></div>
+      </div>
+      <div class="space-card-copy">
+        <span class="space-card-kicker">จินตนาการและการแสดงออก</span>
+        <h2>ห้องศิลปะ</h2>
+        <p>ฝึกสังเกตและถ่ายทอดความคิดผ่านงานสร้างสรรค์</p>
+      </div>
+    </article>
+
+    <article class="space-card">
+      <div class="space-gallery" data-gallery tabindex="0" aria-label="ภาพห้องดนตรี">
+        <div class="gallery-track">
+          <img class="gallery-slide" src="assets/places/music-room-01.webp" alt="นักเรียนฝึกเล่นเครื่องดนตรีร่วมกับคุณครู" loading="lazy">
+          <img class="gallery-slide" src="assets/places/music-room-02.webp" alt="นักเรียนฝึกจังหวะดนตรีร่วมกันในห้องเรียน" loading="lazy">
+        </div>
+        <button class="gallery-control gallery-prev" type="button" data-gallery-prev aria-label="ภาพก่อนหน้า">‹</button>
+        <button class="gallery-control gallery-next" type="button" data-gallery-next aria-label="ภาพถัดไป">›</button>
+        <div class="gallery-status"><span class="gallery-sample">ภาพตัวอย่าง</span><span class="gallery-counter" data-gallery-counter aria-live="polite">01 / 02</span></div>
+        <div class="gallery-dots" data-gallery-dots aria-label="เลือกภาพ"></div>
+      </div>
+      <div class="space-card-copy">
+        <span class="space-card-kicker">ดนตรีและจังหวะ</span>
+        <h2>ห้องดนตรี</h2>
+        <p>เรียนรู้การฟัง ฝึกทักษะ และเล่นดนตรีร่วมกัน</p>
+      </div>
+    </article>
+
+    <article class="space-card">
+      <div class="space-gallery" data-gallery tabindex="0" aria-label="ภาพห้องการงานอาชีพ">
+        <div class="gallery-track">
+          <img class="gallery-slide" src="assets/places/career-room-01.webp" alt="นักเรียนฝึกเตรียมอาหารอย่างปลอดภัยในชั้นเรียน" loading="lazy">
+          <img class="gallery-slide" src="assets/places/career-room-02.webp" alt="นักเรียนร่วมกันจัดเตรียมผลงานจากกิจกรรมการงานอาชีพ" loading="lazy">
+        </div>
+        <button class="gallery-control gallery-prev" type="button" data-gallery-prev aria-label="ภาพก่อนหน้า">‹</button>
+        <button class="gallery-control gallery-next" type="button" data-gallery-next aria-label="ภาพถัดไป">›</button>
+        <div class="gallery-status"><span class="gallery-sample">ภาพตัวอย่าง</span><span class="gallery-counter" data-gallery-counter aria-live="polite">01 / 02</span></div>
+        <div class="gallery-dots" data-gallery-dots aria-label="เลือกภาพ"></div>
+      </div>
+      <div class="space-card-copy">
+        <span class="space-card-kicker">ทักษะชีวิต</span>
+        <h2>ห้องการงานอาชีพ</h2>
+        <p>ฝึกทักษะพื้นฐานผ่านงานประดิษฐ์และงานครัว</p>
+      </div>
+    </article>
+
+    <article class="space-card">
+      <div class="space-gallery" data-gallery tabindex="0" aria-label="ภาพห้องเรียนภาษา">
+        <div class="gallery-track">
+          <img class="gallery-slide" src="assets/places/language-room-01.webp" alt="นักเรียนฝึกสนทนาภาษาต่างประเทศเป็นคู่" loading="lazy">
+          <img class="gallery-slide" src="assets/places/language-room-02.webp" alt="นักเรียนทำกิจกรรมภาษาเป็นกลุ่มเล็กในชั้นเรียน" loading="lazy">
+        </div>
+        <button class="gallery-control gallery-prev" type="button" data-gallery-prev aria-label="ภาพก่อนหน้า">‹</button>
+        <button class="gallery-control gallery-next" type="button" data-gallery-next aria-label="ภาพถัดไป">›</button>
+        <div class="gallery-status"><span class="gallery-sample">ภาพตัวอย่าง</span><span class="gallery-counter" data-gallery-counter aria-live="polite">01 / 02</span></div>
+        <div class="gallery-dots" data-gallery-dots aria-label="เลือกภาพ"></div>
+      </div>
+      <div class="space-card-copy">
+        <span class="space-card-kicker">สื่อสารและแลกเปลี่ยน</span>
+        <h2>ห้องเรียนภาษา</h2>
+        <p>ฝึกฟัง พูด และสื่อสารผ่านกิจกรรมกลุ่ม</p>
       </div>
     </article>
   </section>

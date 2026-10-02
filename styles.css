@@ -789,13 +789,13 @@ h1 em { color: var(--accent); font-style: normal; }
   min-height: 44px;
   padding: 0 15px;
   gap: 10px;
-  border: 1px solid #008940;
+  border: 1px solid var(--pine);
   background: var(--brand-green);
   color: #102b1b;
   font-weight: 600;
 }
-.site-nav a.nav-apply:hover { background: #00a853; }
-.nav-apply > span { width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: #ffffffc9; font-size: 15px; line-height: 1; }
+.site-nav a.nav-apply:hover { background: #008940; }
+.nav-apply > span:last-child { width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: #ffffffc9; font-size: 15px; line-height: 1; }
 
 /* Enrollment page mockup */
 .admissions-shell { width: min(1180px, calc(100% - 2 * clamp(20px, 5vw, 72px))); margin: 0 auto; padding: 52px 0 70px; }
@@ -1024,6 +1024,14 @@ h1 em { color: var(--accent); font-style: normal; }
 .history-item { min-width: 0; padding: 17px 18px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
 .history-date { color: var(--pine); font-size: 13px; font-weight: 600; }
 .history-item p { margin: 7px 0 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.manager-vision { width: min(1380px, calc(100% - 2 * clamp(22px, 5.4vw, 88px))); margin: 0 auto 42px; display: grid; grid-template-columns: minmax(250px, .64fr) minmax(0, 1.36fr); overflow: hidden; border: 1px solid #d8e7dc; border-radius: 22px; background: #edf5ef; }
+.manager-portrait { position: relative; min-height: 330px; margin: 0; overflow: hidden; background: #e5eee6; }
+.manager-portrait img { width: 100%; height: 100%; min-height: 330px; display: block; object-fit: cover; object-position: center 24%; }
+.manager-portrait figcaption { position: absolute; right: 9px; bottom: 9px; left: 9px; width: fit-content; max-width: calc(100% - 18px); padding: 5px 8px; border: 1px solid #ffffffa6; border-radius: 8px; background: #ffffffd9; color: #48584d; font-size: 10px; line-height: 1.4; }
+.manager-vision-copy { align-self: center; padding: clamp(24px, 5vw, 52px); }
+.manager-vision-label { display: inline-flex; padding: 6px 10px; border: 1px solid #d0e2d4; border-radius: 999px; background: #f9fcfa; color: var(--pine); font-size: 11px; }
+.manager-vision-copy h2 { margin: 15px 0 8px; color: var(--pine); font-size: 25px; font-weight: 500; }
+.manager-vision-copy p { max-width: 720px; margin: 0; color: #4f6255; font-size: 15px; line-height: 1.9; }
 .leadership-message { min-height: 0; margin-bottom: 42px; padding: 20px 24px; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; border-radius: 18px; }
 .leadership-copy h2 { margin: 0 0 4px; font-size: 18px; }
 .leadership-copy > p { margin: 0; font-size: 12px; }
@@ -1057,10 +1065,13 @@ h1 em { color: var(--accent); font-style: normal; }
 
 .site-footer { min-height: 60px; justify-content: flex-start; }
 
+.nav-label-short { display: none; }
+
 @media (max-width: 920px) {
   .tour-corner-note { top: 145px; }
   .information-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .history-timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .manager-vision { grid-template-columns: minmax(220px, .72fr) minmax(0, 1.28fr); }
 }
 
 @media (max-width: 700px) {
@@ -1081,6 +1092,12 @@ h1 em { color: var(--accent); font-style: normal; }
   .history-timeline { grid-template-columns: 1fr; gap: 8px; }
   .history-item { padding: 14px 15px; }
   .history-item p { font-size: 13px; }
+  .manager-vision { width: calc(100% - 36px); margin-bottom: 30px; grid-template-columns: 1fr; border-radius: 18px; }
+  .manager-portrait { height: clamp(270px, 70vw, 360px); min-height: 0; }
+  .manager-portrait img { height: 100%; min-height: 0; object-position: center 23%; }
+  .manager-vision-copy { padding: 20px; }
+  .manager-vision-copy h2 { margin-top: 12px; font-size: 22px; }
+  .manager-vision-copy p { font-size: 14px; line-height: 1.8; }
   .leadership-message { margin-bottom: 32px; padding: 17px; grid-template-columns: minmax(0, 1fr); gap: 11px; }
   .leadership-message .button { grid-column: auto; justify-self: start; }
   .places-hero { padding-top: 28px; padding-bottom: 15px; gap: 7px; }
@@ -1098,4 +1115,120 @@ h1 em { color: var(--accent); font-style: normal; }
   .page-admissions .admission-google-form { height: 1240px; }
   .site-footer { min-height: 0; padding: 14px 0 18px; display: flex; }
   .tour-corner-note { top: auto; right: 10px; bottom: 88px; left: max(10px, env(safe-area-inset-left)); max-width: min(245px, calc(100% - 20px)); }
+}
+
+/* Single-row mobile navigation with concise labels and a clear application action. */
+@media (max-width: 700px) {
+  .site-header {
+    width: calc(100% - 20px);
+    padding: 10px 8px;
+    gap: 8px;
+  }
+
+  .site-nav {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 4px;
+  }
+
+  .site-nav a,
+  .site-nav a.active:not(.nav-apply),
+  .site-nav a.nav-apply,
+  .site-nav a.nav-apply.active,
+  .site-nav a.nav-apply:hover {
+    width: auto;
+    min-width: 0;
+    min-height: 44px;
+    margin: 0;
+    padding: 0 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e6ece7;
+    border-radius: 12px;
+    background: #f8faf8;
+    color: #46564b;
+    font-size: clamp(10px, 3vw, 12px);
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .site-nav a.active:not(.nav-apply) {
+    border-color: #c7dece;
+    background: var(--pine-soft);
+    color: var(--pine);
+    font-weight: 600;
+  }
+
+  .site-nav a.nav-apply,
+  .site-nav a.nav-apply.active,
+  .site-nav a.nav-apply:hover {
+    border-color: var(--pine);
+    border-radius: 14px;
+    background: var(--brand-green);
+    color: #102b1b;
+    font-weight: 600;
+  }
+
+  .nav-label-full { display: none; }
+  .nav-label-short { display: inline; }
+  .site-nav .nav-apply > span:last-child { display: none; }
+  .site-nav a:focus-visible { outline: 2px solid var(--pine); outline-offset: 2px; }
+}
+
+@media (max-width: 360px) {
+  .site-header { width: calc(100% - 16px); padding-right: 6px; padding-left: 6px; }
+  .site-nav { gap: 2px; }
+  .site-nav a,
+  .site-nav a.active:not(.nav-apply),
+  .site-nav a.nav-apply,
+  .site-nav a.nav-apply.active,
+  .site-nav a.nav-apply:hover { padding-right: 1px; padding-left: 1px; font-size: 10px; }
+}
+
+/* Personnel directory: clear role groups with compact, responsive cards. */
+.personnel-page .personnel-hero { padding-top: 38px; padding-bottom: 18px; }
+.personnel-page .personnel-hero > p { margin: 9px 0 0; font-size: 14px; }
+.personnel-note { width: min(1380px, calc(100% - 2 * clamp(22px, 5.4vw, 88px))); margin: 0 auto 24px; padding: 12px 16px; display: flex; align-items: center; gap: 12px; border: 1px solid #dce8dd; border-radius: 14px; background: #f1f6f1; }
+.personnel-note span { flex: 0 0 auto; color: var(--pine); font-size: 12px; font-weight: 600; }
+.personnel-note p { margin: 0; color: #68766b; font-size: 12px; line-height: 1.6; }
+.personnel-page .personnel-directory { padding-top: 0; border-top: 0; }
+.personnel-group + .personnel-group { margin-top: 39px; }
+.personnel-group-heading { margin-bottom: 14px; display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
+.personnel-group-heading h2 { margin: 0; color: var(--pine); font-size: 22px; font-weight: 500; }
+.personnel-group-heading > span { color: #778277; font-size: 12px; }
+.personnel-page .personnel-grid { gap: 12px; }
+.personnel-page .personnel-grid-teachers { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.personnel-page .personnel-grid-support { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.personnel-page .person-card { min-height: 112px; padding: 12px; grid-template-columns: 76px minmax(0, 1fr); gap: 13px; border-color: #e2e9e2; border-radius: 16px; box-shadow: 0 2px 8px #1b362208; }
+.personnel-page .person-card .person-portrait { width: 76px; aspect-ratio: 1; }
+.personnel-portrait-photo img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 20%; }
+.personnel-avatar { background: #edf4ee; color: var(--pine); }
+.personnel-avatar span { max-width: 100%; padding: 6px; border: 0; border-radius: 0; background: transparent; font-size: 12px; font-weight: 600; text-align: center; }
+.personnel-card-kicker { color: #7c887d; font-size: 10px; }
+.personnel-page .person-card-copy h3 { margin: 4px 0 3px; font-size: 14px; line-height: 1.45; overflow-wrap: anywhere; }
+.personnel-page .person-card-copy small { display: block; font-size: 11px; line-height: 1.5; }
+
+@media (max-width: 1040px) {
+  .personnel-page .personnel-grid-teachers { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 700px) {
+  .personnel-page .personnel-hero { padding: 30px 0 13px; }
+  .personnel-page .personnel-hero > p { font-size: 13px; }
+  .personnel-note { width: calc(100% - 36px); margin-bottom: 19px; padding: 11px 12px; align-items: start; flex-direction: column; gap: 3px; }
+  .personnel-note p { font-size: 12px; }
+  .personnel-page .personnel-section { padding-bottom: 30px; }
+  .personnel-group + .personnel-group { margin-top: 29px; }
+  .personnel-group-heading { margin-bottom: 11px; }
+  .personnel-group-heading h2 { font-size: 19px; }
+  .personnel-group-heading > span { font-size: 11px; }
+  .personnel-page .personnel-grid,
+  .personnel-page .personnel-grid-teachers,
+  .personnel-page .personnel-grid-support { grid-template-columns: 1fr; gap: 9px; }
+  .personnel-page .person-card { min-height: 88px; padding: 9px; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; }
+  .personnel-page .person-card .person-portrait { width: 64px; }
+  .personnel-page .person-card-copy h3 { font-size: 15px; }
 }

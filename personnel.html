@@ -19,11 +19,11 @@
     <span class="brand-copy"><strong>สหวิทยานุสรณ์</strong></span>
   </a>
   <nav class="site-nav" id="siteNav" aria-label="เมนูหลัก">
-      <a href="index.html">เกี่ยวกับโรงเรียน</a>
-      <a href="places.html">สถานที่ภายในโรงเรียน</a>
-      <a href="explore.html">สำรวจพื้นที่</a>
-      <a class="active" aria-current="page" href="personnel.html">บุคลากร</a>
-      <a class="nav-apply" href="admissions.html">สมัครเรียน <span aria-hidden="true">↗</span></a>
+      <a aria-label="เกี่ยวกับโรงเรียน" href="index.html"><span class="nav-label-full">เกี่ยวกับโรงเรียน</span><span class="nav-label-short" aria-hidden="true">เกี่ยวกับ</span></a>
+      <a aria-label="สถานที่ภายในโรงเรียน" href="places.html"><span class="nav-label-full">สถานที่ภายในโรงเรียน</span><span class="nav-label-short" aria-hidden="true">สถานที่</span></a>
+      <a aria-label="สำรวจพื้นที่ 360 องศา" href="explore.html"><span class="nav-label-full">สำรวจพื้นที่</span><span class="nav-label-short" aria-hidden="true">ชม 360°</span></a>
+      <a class="active" aria-current="page" aria-label="บุคลากร" href="personnel.html"><span class="nav-label-full">บุคลากร</span><span class="nav-label-short" aria-hidden="true">บุคลากร</span></a>
+      <a class="nav-apply" aria-label="สมัครเรียน" href="admissions.html"><span class="nav-label-full">สมัครเรียน</span><span class="nav-label-short" aria-hidden="true">สมัครเรียน</span><span aria-hidden="true">↗</span></a>
   </nav>
   <div class="header-actions">
     <button class="menu-toggle" id="menuToggle" type="button" aria-label="เมนูหลัก" aria-expanded="false" aria-controls="siteNav">
@@ -34,13 +34,64 @@
 <main class="page-shell personnel-page">
   <section class="personnel-hero" aria-labelledby="personnelTitle">
     <h1 id="personnelTitle">บุคลากร</h1>
+    <p>ทีมงานที่ร่วมดูแลและพัฒนาการเรียนรู้ของนักเรียน</p>
   </section>
 
-  <section class="personnel-section personnel-section-compact" aria-labelledby="teamTitle">
-    <div class="section-heading">
-      <div><h2 id="teamTitle">ผู้บริหารและทีมงาน</h2></div>
-    </div>
-    <p class="personnel-empty">กำลังรวบรวมรายชื่อและภาพ</p>
+  <div class="personnel-note" role="note">
+    <span>ข้อมูลตัวอย่าง</span>
+    <p>แสดงตำแหน่งและกลุ่มสาระเพื่อจัดวางหน้าเว็บ ข้อมูลชื่อและภาพบุคลากรจะเพิ่มภายหลัง</p>
+  </div>
+
+  <section class="personnel-section personnel-directory" aria-label="ทำเนียบบุคลากร">
+    <section class="personnel-group" aria-labelledby="managementTitle">
+      <div class="personnel-group-heading">
+        <h2 id="managementTitle">ฝ่ายบริหาร</h2>
+        <span>3 ตำแหน่ง</span>
+      </div>
+      <div class="personnel-grid personnel-grid-management">
+        <article class="person-card">
+          <div class="person-portrait personnel-portrait-photo"><img src="assets/manager-portrait-draft.webp" alt="ภาพตัวอย่างผู้จัดการโรงเรียน"></div>
+          <div class="person-card-copy"><span class="personnel-card-kicker">ฝ่ายบริหาร</span><h3>ผู้จัดการโรงเรียน</h3><small>ภาพตัวอย่าง</small></div>
+        </article>
+        <article class="person-card">
+          <div class="person-portrait personnel-avatar" aria-hidden="true"><span>รอง</span></div>
+          <div class="person-card-copy"><span class="personnel-card-kicker">ฝ่ายบริหาร</span><h3>รองผู้จัดการโรงเรียน</h3><small>รอเพิ่มชื่อและภาพ</small></div>
+        </article>
+        <article class="person-card">
+          <div class="person-portrait personnel-avatar" aria-hidden="true"><span>ผอ.</span></div>
+          <div class="person-card-copy"><span class="personnel-card-kicker">ฝ่ายบริหาร</span><h3>ผู้อำนวยการโรงเรียน</h3><small>รอเพิ่มชื่อและภาพ</small></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="personnel-group" aria-labelledby="teachersTitle">
+      <div class="personnel-group-heading">
+        <h2 id="teachersTitle">ครูผู้สอน</h2>
+        <span>ปฐมวัยและ 8 กลุ่มสาระ</span>
+      </div>
+      <div class="personnel-grid personnel-grid-teachers">
+        <article class="person-card"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>ปฐมวัย</span></div><div class="person-card-copy"><span class="personnel-card-kicker">ครูผู้สอน</span><h3>ปฐมวัย</h3><small>ระดับอนุบาล</small></div></article>
+        <article class="person-card"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>ไทย</span></div><div class="person-card-copy"><span class="personnel-card-kicker">ครูผู้สอน</span><h3>ภาษาไทย</h3><small>กลุ่มสาระการเรียนรู้</small></div></article>
+        <article class="person-card"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>คณิต</span></div><div class="person-card-copy"><span class="personnel-card-kicker">ครูผู้สอน</span><h3>คณิตศาสตร์</h3><small>กลุ่มสาระการเรียนรู้</small></div></article>
+        <article class="person-card"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>วิทย์</span></div><div class="person-card-copy"><span class="personnel-card-kicker">ครูผู้สอน</span><h3>วิทยาศาสตร์และเทคโนโลยี</h3><small>กลุ่มสาระการเรียนรู้</small></div></article>
+        <article class="person-card"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>สังคม</span></div><div class="person-card-copy"><span class="personnel-card-kicker">ครูผู้สอน</span><h3>สังคมศึกษา ศาสนาและวัฒนธรรม</h3><small>กลุ่มสาระการเรียนรู้</small></div></article>
+        <article class="person-card"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>สุขศึกษา</span></div><div class="person-card-copy"><span class="personnel-card-kicker">ครูผู้สอน</span><h3>สุขศึกษาและพลศึกษา</h3><small>กลุ่มสาระการเรียนรู้</small></div></article>
+        <article class="person-card"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>ศิลปะ</span></div><div class="person-card-copy"><span class="personnel-card-kicker">ครูผู้สอน</span><h3>ศิลปะ</h3><small>กลุ่มสาระการเรียนรู้</small></div></article>
+        <article class="person-card"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>อาชีพ</span></div><div class="person-card-copy"><span class="personnel-card-kicker">ครูผู้สอน</span><h3>การงานอาชีพ</h3><small>กลุ่มสาระการเรียนรู้</small></div></article>
+        <article class="person-card"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>ภาษา</span></div><div class="person-card-copy"><span class="personnel-card-kicker">ครูผู้สอน</span><h3>ภาษาต่างประเทศ</h3><small>กลุ่มสาระการเรียนรู้</small></div></article>
+      </div>
+    </section>
+
+    <section class="personnel-group" aria-labelledby="supportTitle">
+      <div class="personnel-group-heading">
+        <h2 id="supportTitle">ฝ่ายสนับสนุน</h2>
+        <span>2 ตำแหน่ง</span>
+      </div>
+      <div class="personnel-grid personnel-grid-support">
+        <article class="person-card"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>แม่บ้าน</span></div><div class="person-card-copy"><span class="personnel-card-kicker">ฝ่ายสนับสนุน</span><h3>แม่บ้าน</h3><small>ดูแลความสะอาดและความเรียบร้อย</small></div></article>
+        <article class="person-card"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>นักการ</span></div><div class="person-card-copy"><span class="personnel-card-kicker">ฝ่ายสนับสนุน</span><h3>นักการ</h3><small>ดูแลอาคารและพื้นที่โรงเรียน</small></div></article>
+      </div>
+    </section>
   </section>
 </main>
 <footer class="site-footer">
