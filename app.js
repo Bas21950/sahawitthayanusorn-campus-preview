@@ -118,3 +118,14 @@ document.querySelectorAll('[data-place-filter]').forEach(button => {
     if (counter) counter.textContent = count + ' พื้นที่การเรียนรู้';
   });
 });
+
+const teacherFilter = document.querySelector('[data-teacher-filter]');
+teacherFilter?.addEventListener('change', () => {
+  let count = 0;
+  document.querySelectorAll('[data-teacher-subject]').forEach(card => {
+    card.hidden = teacherFilter.value !== 'all' && card.dataset.teacherSubject !== teacherFilter.value;
+    if (!card.hidden) count++;
+  });
+  const label = document.querySelector('[data-teacher-count]');
+  if (label) label.textContent = count + ' กลุ่ม';
+});

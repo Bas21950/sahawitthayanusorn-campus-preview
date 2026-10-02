@@ -1381,3 +1381,43 @@ h1 em { color: var(--accent); font-style: normal; }
 @media (prefers-reduced-motion: reduce) {
   .gallery-track, .place-filters button { transition: none; }
 }
+
+/* Team directory: portrait proportions, clear role hierarchy. */
+.personnel-page .personnel-grid-management { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.personnel-page .personnel-grid-teachers { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 24px 20px; }
+.personnel-page .personnel-grid-support { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; }
+.personnel-page .person-card { display: block; min-height: 0; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+.personnel-page .person-card .person-portrait { position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 20px; background: linear-gradient(145deg,#edf4ef,#dce9df); }
+.personnel-page .personnel-grid-management .person-portrait { aspect-ratio: 4 / 3; }
+.personnel-page .personnel-portrait-photo img { object-position: center 23%; }
+.personnel-page .personnel-avatar::before { content: ''; position: absolute; width: 27%; aspect-ratio: 1; top: 22%; left: 36.5%; border-radius: 50%; background: #b8cec0; }
+.personnel-page .personnel-avatar::after { content: ''; position: absolute; width: 65%; height: 45%; bottom: -5%; left: 17.5%; border-radius: 50% 50% 0 0; background: #b8cec0; }
+.personnel-page .personnel-avatar span { position: absolute; z-index: 1; left: 12px; top: 12px; padding: 5px 10px; border-radius: 8px; background: #ffffffb8; color: #547461; font-size: 10px; }
+.personnel-page .person-card-copy { padding: 14px 2px 0; }
+.personnel-page .person-card-copy h3 { margin: 0 0 4px; font-size: 16px; color: #293e31; font-weight: 500; }
+.personnel-page .person-card-copy small { color: #7c8a81; font-size: 12px; line-height: 1.6; }
+.personnel-page .personnel-grid-management .person-card-copy h3 { font-size: 21px; color: var(--pine); }
+.personnel-page .personnel-group + .personnel-group { margin-top: 48px; padding-top: 30px; border-top: 1px solid var(--line); }
+.personnel-note { border: 0; padding: 0; background: transparent; }
+.personnel-note span { padding: 4px 9px; border-radius: 7px; background: #eaf2ed; font-size: 10px; }
+.teacher-toolbar { display: flex; align-items: center; gap: 12px; margin: 18px 0 24px; }
+.teacher-toolbar label { font-size: 12px; color: #65796b; }
+.teacher-toolbar select { width: min(300px,100%); min-width: 0; min-height: 44px; padding: 10px 34px 10px 14px; border: 1px solid #d8e5dc; border-radius: 12px; background: #fff; color: var(--pine); font: 13px var(--font); }
+.teacher-toolbar > span { margin-left: auto; white-space: nowrap; color: #85938a; font-size: 11px; }
+@media (max-width: 920px) {
+ .personnel-page .personnel-grid-teachers, .personnel-page .personnel-grid-support { grid-template-columns: repeat(3,minmax(0,1fr)); }
+}
+@media (max-width: 700px) {
+ .personnel-page .personnel-grid-management { grid-template-columns: 1fr; gap: 28px; }
+ .personnel-page .personnel-grid-management .person-portrait { aspect-ratio: 4 / 3; max-height: 310px; }
+ .personnel-page .personnel-grid-teachers, .personnel-page .personnel-grid-support { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px 14px; }
+ .personnel-page .person-card { display: block; padding: 0; min-height: 0; border-radius: 0; }
+ .personnel-page .person-card .person-portrait { width: 100%; border-radius: 16px; }
+ .personnel-page .person-card-copy h3 { font-size: 13px; }
+ .personnel-page .person-card-copy small { font-size: 11px; }
+ .personnel-page .personnel-grid-management .person-card-copy h3 { font-size: 20px; }
+ .teacher-toolbar { flex-wrap: wrap; gap: 8px; }
+ .teacher-toolbar label { width: 100%; }
+ .teacher-toolbar select { flex: 1; width: 0; font-size: 12px; }
+ .personnel-page .personnel-group + .personnel-group { margin-top: 36px; padding-top: 26px; }
+}
