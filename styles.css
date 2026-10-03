@@ -1421,3 +1421,14 @@ h1 em { color: var(--accent); font-style: normal; }
  .teacher-toolbar select { flex: 1; width: 0; font-size: 12px; }
  .personnel-page .personnel-group + .personnel-group { margin-top: 36px; padding-top: 26px; }
 }
+
+/* School identity replaces the duplicate panorama entry on the About page. */
+.school-identity-visual { margin: 0; min-height: 320px; display: grid; align-content: center; justify-items: center; gap: 18px; padding: 28px; border-radius: 28px; background: radial-gradient(ellipse at center,#fff 35%,#edf5ef 100%); }
+.school-identity-visual img { display: block; width: 200px; max-width: 65%; height: auto; border-radius: 50%; }
+.school-identity-visual figcaption { text-align: center; color: var(--pine); font-size: 17px; font-weight: 500; }
+.school-identity-visual figcaption span { display: block; margin-top: 5px; color: var(--muted); font-size: 11px; font-weight: 400; }
+@media (max-width:700px) {
+ .school-identity-visual { min-height: 220px; padding: 22px; gap: 12px; border-radius: 24px; }
+ .school-identity-visual img { width: 130px; }
+ .school-identity-visual figcaption { font-size: 14px; }
+}
