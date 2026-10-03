@@ -1432,3 +1432,7 @@ h1 em { color: var(--accent); font-style: normal; }
  .school-identity-visual img { width: 130px; }
  .school-identity-visual figcaption { font-size: 14px; }
 }
+.about-learning-visual { position: relative; margin: 0; height: 340px; overflow: hidden; border-radius: 28px; }
+.about-learning-visual img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.about-learning-visual figcaption { position: absolute; bottom: 12px; right: 12px; padding: 4px 8px; border-radius: 7px; background: #ffffffd9; color: #53685b; font-size: 9px; }
+@media (max-width:700px) { .about-learning-visual { height: 230px; border-radius: 24px; } }
