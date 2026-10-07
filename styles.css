@@ -1422,6 +1422,37 @@ h1 em { color: var(--accent); font-style: normal; }
  .personnel-page .personnel-group + .personnel-group { margin-top: 36px; padding-top: 26px; }
 }
 
+/* Compact staff profiles with a consistent name and education hierarchy. */
+.personnel-page .personnel-grid-management { gap: 16px; }
+.personnel-page .personnel-grid-management .person-card { display: grid; grid-template-columns: 96px minmax(0,1fr); align-items: start; gap: 16px; padding: 18px; border: 1px solid var(--line); border-radius: 20px; background: #fff; }
+.personnel-page .personnel-grid-management .person-portrait { width: 96px; height: 120px; aspect-ratio: auto; border-radius: 14px; }
+.personnel-page .personnel-grid-management .person-card-copy { padding: 0; }
+.personnel-page .personnel-grid-management .person-card-copy h3 { font-size: 18px; color: #293e31; }
+.person-role { display: block; margin-bottom: 6px; color: var(--pine); font-size: 12px; line-height: 1.6; font-weight: 500; }
+.person-education { margin-top: 13px; padding-top: 11px; border-top: 1px solid var(--line); }
+.person-education > span { display: block; color: #78867c; font-size: 11px; }
+.person-education p { margin: 4px 0 0; color: #41594a; font-size: 13px; line-height: 1.7; }
+.personnel-page .person-education p small { color: #627568; font-size: 12px; }
+.personnel-page .personnel-grid-teachers { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
+.personnel-page .personnel-grid-teachers .person-card { display: grid; grid-template-columns: 80px minmax(0,1fr); gap: 16px; align-items: start; padding: 18px; border-radius: 18px; border: 1px solid var(--line); background: #fff; }
+.personnel-page .personnel-grid-teachers .person-portrait { width: 80px; height: 100px; aspect-ratio: auto; border-radius: 12px; }
+.personnel-page .personnel-grid-teachers .person-card-copy { padding: 0; }
+.personnel-page .personnel-grid-teachers .person-card-copy h3 { font-size: 17px; line-height: 1.5; }
+.personnel-page .person-card[hidden] { display: none; }
+@media (max-width: 1100px) {
+  .personnel-page .personnel-grid-management { grid-template-columns: 1fr; }
+  .personnel-page .personnel-grid-teachers { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 700px) {
+  .personnel-page .personnel-grid-management { gap: 12px; }
+  .personnel-page .personnel-grid-management .person-card { grid-template-columns: 80px minmax(0,1fr); padding: 16px; gap: 14px; }
+  .personnel-page .personnel-grid-management .person-portrait { width: 80px; height: 104px; }
+  .personnel-page .personnel-grid-teachers { grid-template-columns: 1fr; gap: 12px; }
+  .personnel-page .personnel-grid-teachers .person-card { padding: 16px; gap: 14px; }
+  .personnel-page .personnel-grid-management .person-card-copy h3 { font-size: 18px; }
+  .personnel-page .personnel-grid-teachers .person-card-copy h3 { font-size: 17px; }
+}
+
 /* School identity replaces the duplicate panorama entry on the About page. */
 .school-identity-visual { margin: 0; min-height: 320px; display: grid; align-content: center; justify-items: center; gap: 18px; padding: 28px; border-radius: 28px; background: radial-gradient(ellipse at center,#fff 35%,#edf5ef 100%); }
 .school-identity-visual img { display: block; width: 200px; max-width: 65%; height: auto; border-radius: 50%; }

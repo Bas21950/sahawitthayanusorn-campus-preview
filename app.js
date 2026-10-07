@@ -127,7 +127,7 @@ teacherFilter?.addEventListener('change', () => {
     if (!card.hidden) count++;
   });
   const label = document.querySelector('[data-teacher-count]');
-  if (label) label.textContent = count + ' กลุ่ม';
+  if (label) label.textContent = count + ' คน';
 });
 const tourDialog = document.querySelector("#tourDialog");
 const tourDialogFrame = document.querySelector("#tourDialogFrame");
