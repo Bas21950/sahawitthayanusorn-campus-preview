@@ -142,7 +142,7 @@ function openTourScene(scene, title, updateHistory = true) {
   activeTourScene = scene;
   tourFrameReady = false;
   if (tourDialogTitle) tourDialogTitle.textContent = title || "ชมทัวร์ 360°";
-  tourDialogFrame.src = panoeeTourOrigin + "/iframe/6abf2206fce8ddf28c6a1011?embedFullscreen=1&embedVr=0&embedGyro=1&scene=" + encodeURIComponent(scene);
+  tourDialogFrame.src = panoeeTourOrigin + "/6abf2206fce8ddf28c6a1011/" + encodeURIComponent(scene);
   if (!tourDialog.open) tourDialog.showModal();
   if (updateHistory) {
     const url = new URL(window.location.href);
