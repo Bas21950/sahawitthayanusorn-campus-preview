@@ -129,3 +129,87 @@ teacherFilter?.addEventListener('change', () => {
   const label = document.querySelector('[data-teacher-count]');
   if (label) label.textContent = count + ' กลุ่ม';
 });
+const tourDialog = document.querySelector("#tourDialog");
+const tourDialogFrame = document.querySelector("#tourDialogFrame");
+const tourDialogTitle = document.querySelector("#tourDialogTitle");
+const tourSceneCards = [...document.querySelectorAll("[data-tour-scene]")];
+const panoeeTourOrigin = "https://tour.panoee.net";
+let activeTourScene = "";
+let tourFrameReady = false;
+
+function openTourScene(scene, title, updateHistory = true) {
+  if (!tourDialog || !tourDialogFrame || !scene) return;
+  activeTourScene = scene;
+  tourFrameReady = false;
+  if (tourDialogTitle) tourDialogTitle.textContent = title || "ชมทัวร์ 360°";
+  tourDialogFrame.src = panoeeTourOrigin + "/iframe/6abf2206fce8ddf28c6a1011?embedFullscreen=1&embedVr=0&embedGyro=1&scene=" + encodeURIComponent(scene);
+  if (!tourDialog.open) tourDialog.showModal();
+  if (updateHistory) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("scene", scene);
+    window.history.pushState({ ...(window.history.state || {}), tourDialog: true }, "", url);
+  }
+}
+
+function closeTourScene(fromPopState = false) {
+  if (!tourDialog || !tourDialog.open) return;
+  tourDialog.close();
+  tourDialogFrame?.removeAttribute("src");
+  activeTourScene = "";
+  tourFrameReady = false;
+  if (!fromPopState) {
+    if (window.history.state?.tourDialog) {
+      window.history.back();
+    } else {
+      const url = new URL(window.location.href);
+      url.searchParams.delete("scene");
+      window.history.replaceState(window.history.state, "", url);
+    }
+  }
+}
+
+tourSceneCards.forEach(card => card.addEventListener("click", () => {
+  if (typeof DeviceMotionEvent !== "undefined" && typeof DeviceMotionEvent.requestPermission === "function") {
+    DeviceMotionEvent.requestPermission().catch(() => {});
+  }
+  openTourScene(card.dataset.tourScene, card.dataset.tourTitle, true);
+}));
+document.querySelectorAll("[data-tour-close]").forEach(button => button.addEventListener("click", () => closeTourScene()));
+tourDialog?.addEventListener("click", event => {
+  if (event.target === tourDialog) closeTourScene();
+});
+tourDialog?.addEventListener("cancel", () => {
+  if (window.history.state?.tourDialog) window.history.back();
+  else {
+    const url = new URL(window.location.href);
+    url.searchParams.delete("scene");
+    window.history.replaceState(window.history.state, "", url);
+  }
+});
+tourDialogFrame?.addEventListener("load", () => { tourFrameReady = true; });
+window.addEventListener("devicemotion", event => {
+  if (!tourFrameReady || !tourDialogFrame?.contentWindow || !activeTourScene) return;
+  const sample = (value, keys) => value ? Object.fromEntries(keys.map(key => [key, typeof value[key] === "number" ? value[key] : null])) : null;
+  tourDialogFrame.contentWindow.postMessage({
+    type: "devicemotion",
+    deviceMotionEvent: {
+      acceleration: sample(event.acceleration, ["x", "y", "z"]),
+      accelerationIncludingGravity: sample(event.accelerationIncludingGravity, ["x", "y", "z"]),
+      rotationRate: sample(event.rotationRate, ["alpha", "beta", "gamma"]),
+      interval: typeof event.interval === "number" ? event.interval : 0,
+      timeStamp: event.timeStamp
+    }
+  }, panoeeTourOrigin);
+}, { passive: true });
+window.addEventListener("popstate", () => {
+  const scene = new URL(window.location.href).searchParams.get("scene");
+  if (scene) {
+    const card = tourSceneCards.find(item => item.dataset.tourScene === scene);
+    openTourScene(scene, card?.dataset.tourTitle || "ชมทัวร์ 360°", false);
+  } else closeTourScene(true);
+});
+const initialTourScene = new URL(window.location.href).searchParams.get("scene");
+if (initialTourScene && tourSceneCards.some(card => card.dataset.tourScene === initialTourScene)) {
+  const card = tourSceneCards.find(item => item.dataset.tourScene === initialTourScene);
+  openTourScene(initialTourScene, card.dataset.tourTitle, false);
+}
