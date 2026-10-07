@@ -132,8 +132,7 @@ teacherFilter?.addEventListener('change', () => {
 
 const portraitLightbox = document.querySelector('#portraitLightbox');
 const portraitLightboxImage = document.querySelector('#portraitLightboxImage');
-const portraitLightboxTitle = document.querySelector('#portraitLightboxTitle');
-const portraitLightboxClose = document.querySelector('[data-personnel-photo-close]');
+const portraitLightboxDismiss = document.querySelector('[data-personnel-photo-dismiss]');
 let lastPortraitTrigger = null;
 
 document.querySelectorAll('[data-personnel-photo]').forEach(trigger => {
@@ -141,15 +140,16 @@ document.querySelectorAll('[data-personnel-photo]').forEach(trigger => {
     const sourceImage = trigger.querySelector('img');
     if (!portraitLightbox || !portraitLightboxImage || !sourceImage) return;
     lastPortraitTrigger = trigger;
-    portraitLightboxTitle.textContent = trigger.dataset.personnelPhotoTitle || sourceImage.alt || 'ภาพบุคลากร';
+    const photoTitle = trigger.dataset.personnelPhotoTitle || sourceImage.alt || 'ภาพบุคลากร';
+    portraitLightboxDismiss?.setAttribute('aria-label', 'แตะอีกครั้งเพื่อปิดภาพ' + photoTitle);
     portraitLightboxImage.src = sourceImage.currentSrc || sourceImage.src;
     portraitLightboxImage.alt = sourceImage.alt;
     portraitLightbox.showModal();
-    portraitLightboxClose?.focus();
+    portraitLightboxDismiss?.focus();
   });
 });
 
-portraitLightboxClose?.addEventListener('click', () => portraitLightbox?.close());
+portraitLightboxDismiss?.addEventListener('click', () => portraitLightbox?.close());
 portraitLightbox?.addEventListener('click', event => {
   if (event.target === portraitLightbox) portraitLightbox.close();
 });

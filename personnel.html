@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261007-team3">
-  <script src="app.js?v=20261007-team3" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261007-team4">
+  <script src="app.js?v=20261007-team4" defer></script>
 </head>
 <body class="page-personnel">
 <header class="site-header">
@@ -50,9 +50,8 @@
       </div>
       <div class="personnel-grid personnel-grid-management">
         <article class="person-card">
-          <button class="person-portrait personnel-portrait-photo portrait-view-trigger" type="button" data-personnel-photo data-personnel-photo-title="ผู้จัดการโรงเรียน" aria-label="ขยายภาพผู้จัดการโรงเรียน" aria-haspopup="dialog">
+          <button class="person-portrait personnel-portrait-photo portrait-view-trigger" type="button" data-personnel-photo data-personnel-photo-title="ผู้จัดการโรงเรียน" aria-label="ดูรูปผู้จัดการโรงเรียนขนาดใหญ่" aria-haspopup="dialog">
             <img src="assets/manager-portrait-draft.webp" alt="ผู้จัดการโรงเรียน">
-            <span class="portrait-view-hint" aria-hidden="true">ขยายภาพ <span>↗</span></span>
           </button>
           <div class="person-card-copy"><span class="person-role">ผู้จัดการโรงเรียน</span><h3>ชื่อ–นามสกุล</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ระบุวุฒิและสาขาวิชา</p></div></div>
         </article>
@@ -100,15 +99,10 @@
 <footer class="site-footer">
   <span>© 2026 โรงเรียนสหวิทยานุสรณ์</span>
 </footer>
-<dialog class="portrait-lightbox" id="portraitLightbox" aria-labelledby="portraitLightboxTitle" aria-describedby="portraitLightboxHelp">
-  <div class="portrait-lightbox-header">
-    <div><span>ภาพบุคลากร</span><h2 id="portraitLightboxTitle">ดูภาพขนาดใหญ่</h2></div>
-    <button class="portrait-lightbox-close" type="button" data-personnel-photo-close autofocus aria-label="ปิดภาพ">×</button>
-  </div>
-  <figure class="portrait-lightbox-figure">
+<dialog class="portrait-lightbox" id="portraitLightbox" aria-label="ภาพผู้จัดการโรงเรียนขนาดใหญ่">
+  <button class="portrait-lightbox-dismiss" type="button" data-personnel-photo-dismiss autofocus aria-label="แตะอีกครั้งเพื่อปิดภาพผู้จัดการโรงเรียน">
     <img id="portraitLightboxImage" alt="">
-    <figcaption id="portraitLightboxHelp">กดปุ่มปิดหรือปุ่ม Esc เพื่อกลับไปหน้าบุคลากร</figcaption>
-  </figure>
+  </button>
 </dialog>
 </body>
 </html>
