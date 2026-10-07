@@ -129,6 +129,36 @@ teacherFilter?.addEventListener('change', () => {
   const label = document.querySelector('[data-teacher-count]');
   if (label) label.textContent = count + ' คน';
 });
+
+const portraitLightbox = document.querySelector('#portraitLightbox');
+const portraitLightboxImage = document.querySelector('#portraitLightboxImage');
+const portraitLightboxTitle = document.querySelector('#portraitLightboxTitle');
+const portraitLightboxClose = document.querySelector('[data-personnel-photo-close]');
+let lastPortraitTrigger = null;
+
+document.querySelectorAll('[data-personnel-photo]').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const sourceImage = trigger.querySelector('img');
+    if (!portraitLightbox || !portraitLightboxImage || !sourceImage) return;
+    lastPortraitTrigger = trigger;
+    portraitLightboxTitle.textContent = trigger.dataset.personnelPhotoTitle || sourceImage.alt || 'ภาพบุคลากร';
+    portraitLightboxImage.src = sourceImage.currentSrc || sourceImage.src;
+    portraitLightboxImage.alt = sourceImage.alt;
+    portraitLightbox.showModal();
+    portraitLightboxClose?.focus();
+  });
+});
+
+portraitLightboxClose?.addEventListener('click', () => portraitLightbox?.close());
+portraitLightbox?.addEventListener('click', event => {
+  if (event.target === portraitLightbox) portraitLightbox.close();
+});
+portraitLightbox?.addEventListener('close', () => {
+  portraitLightboxImage?.removeAttribute('src');
+  if (lastPortraitTrigger?.isConnected) lastPortraitTrigger.focus();
+  lastPortraitTrigger = null;
+});
+
 const tourDialog = document.querySelector("#tourDialog");
 const tourDialogFrame = document.querySelector("#tourDialogFrame");
 const tourDialogTitle = document.querySelector("#tourDialogTitle");

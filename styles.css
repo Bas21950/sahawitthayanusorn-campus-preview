@@ -1453,6 +1453,140 @@ h1 em { color: var(--accent); font-style: normal; }
   .personnel-page .personnel-grid-teachers .person-card-copy h3 { font-size: 17px; }
 }
 
+/* Make real staff portraits easy to enlarge with touch, mouse, or keyboard. */
+.personnel-page button.portrait-view-trigger {
+  padding: 0;
+  border: 1px solid #a8c2af;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: zoom-in;
+}
+.personnel-page button.portrait-view-trigger:focus-visible {
+  outline: 3px solid #173f29;
+  outline-offset: 4px;
+}
+.personnel-page .portrait-view-hint {
+  position: absolute;
+  z-index: 2;
+  right: 8px;
+  bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid #d8e7dc;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 2px 10px #13291b35;
+  color: #075c32;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.personnel-page .portrait-view-hint span {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  font-size: 16px;
+  line-height: 1;
+}
+.portrait-lightbox {
+  width: min(1000px, calc(100vw - 28px));
+  max-width: none;
+  max-height: calc(100dvh - 28px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid #d7e2d9;
+  border-radius: 22px;
+  background: #fff;
+  color: #1b3022;
+  box-shadow: 0 24px 80px #0007;
+}
+.portrait-lightbox::backdrop {
+  background: #08130dcc;
+  backdrop-filter: blur(3px);
+}
+.portrait-lightbox-header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 18px;
+  border-bottom: 1px solid #e1e9e2;
+  background: #fff;
+}
+.portrait-lightbox-header > div > span {
+  color: #64786a;
+  font-size: 12px;
+}
+.portrait-lightbox-header h2 {
+  margin: 2px 0 0;
+  color: #075c32;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.portrait-lightbox-close {
+  display: grid;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid #cbdccd;
+  border-radius: 50%;
+  background: #eff6f0;
+  color: #164b2c;
+  font: 400 30px/1 var(--font);
+  cursor: pointer;
+}
+.portrait-lightbox-close:hover { background: #dceee0; }
+.portrait-lightbox-close:focus-visible {
+  outline: 3px solid #173f29;
+  outline-offset: 3px;
+}
+.portrait-lightbox-figure {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 16px 20px 20px;
+}
+.portrait-lightbox-figure img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100dvh - 180px);
+  object-fit: contain;
+  border-radius: 10px;
+}
+.portrait-lightbox-figure figcaption {
+  color: #526457;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .portrait-lightbox {
+    width: calc(100vw - 16px);
+    max-height: calc(100dvh - 16px);
+    border-radius: 18px;
+  }
+  .portrait-lightbox-header { padding: 12px 14px; }
+  .portrait-lightbox-header h2 { font-size: 17px; }
+  .portrait-lightbox-figure { gap: 10px; padding: 12px 12px 16px; }
+  .portrait-lightbox-figure img { max-height: calc(100dvh - 180px); }
+  .portrait-lightbox-figure figcaption { font-size: 13px; }
+}
+
 /* School identity replaces the duplicate panorama entry on the About page. */
 .school-identity-visual { margin: 0; min-height: 320px; display: grid; align-content: center; justify-items: center; gap: 18px; padding: 28px; border-radius: 28px; background: radial-gradient(ellipse at center,#fff 35%,#edf5ef 100%); }
 .school-identity-visual img { display: block; width: 200px; max-width: 65%; height: auto; border-radius: 50%; }
