@@ -1432,6 +1432,7 @@ h1 em { color: var(--accent); font-style: normal; }
 .person-education { margin-top: 13px; padding-top: 11px; border-top: 1px solid var(--line); }
 .person-education > span { display: block; color: #78867c; font-size: 11px; }
 .person-education p { margin: 4px 0 0; color: #41594a; font-size: 13px; line-height: 1.7; }
+.personnel-page .person-education p + p { margin-top: 7px; padding-top: 7px; border-top: 1px solid #edf1ed; }
 .personnel-page .person-education p small { color: #627568; font-size: 12px; }
 .personnel-page .personnel-grid-teachers { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
 .personnel-page .personnel-grid-teachers .person-card { display: grid; grid-template-columns: 80px minmax(0,1fr); gap: 16px; align-items: start; padding: 18px; border-radius: 18px; border: 1px solid var(--line); background: #fff; }

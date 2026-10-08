@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261007-team4">
-  <script src="app.js?v=20261007-team4" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261008-data1">
+  <script src="app.js?v=20261008-data1" defer></script>
 </head>
 <body class="page-personnel">
 <header class="site-header">
@@ -38,8 +38,8 @@
   </section>
 
   <div class="personnel-note" role="note">
-    <span>ข้อมูลตัวอย่าง</span>
-    <p>ชื่อและวุฒิการศึกษาเป็นตัวอย่างสำหรับจัดวาง รอข้อมูลจริงจากโรงเรียน</p>
+    <span>ข้อมูลบุคลากร</span>
+    <p>รายชื่อครูและธุรการอัปเดตตามข้อมูลที่ได้รับ ส่วนตำแหน่งที่ยังไม่มีข้อมูลจะแจ้งเพิ่มเติมภายหลัง</p>
   </div>
 
   <section class="personnel-section personnel-directory" aria-label="ทำเนียบบุคลากร">
@@ -69,29 +69,34 @@
     <section class="personnel-group" aria-labelledby="teachersTitle">
       <div class="personnel-group-heading">
         <h2 id="teachersTitle">ครูผู้สอน</h2>
-        <span>ปฐมวัยและ 8 กลุ่มสาระ</span>
+        <span>12 คน · ปฐมวัยและกลุ่มสาระ</span>
       </div>
-      <div class="teacher-toolbar"><label for="teacherSubject">เลือกกลุ่มสาระ</label><select id="teacherSubject" data-teacher-filter><option value="all">ทุกกลุ่มสาระ</option><option value="subject-0">ปฐมวัย</option><option value="subject-1">ภาษาไทย</option><option value="subject-2">คณิตศาสตร์</option><option value="subject-3">วิทยาศาสตร์และเทคโนโลยี</option><option value="subject-4">สังคมศึกษา ศาสนาและวัฒนธรรม</option><option value="subject-5">สุขศึกษาและพลศึกษา</option><option value="subject-6">ศิลปะ</option><option value="subject-7">การงานอาชีพ</option><option value="subject-8">ภาษาต่างประเทศ</option></select><span data-teacher-count aria-live="polite">9 คน</span></div><div class="personnel-grid personnel-grid-teachers">
-        <article class="person-card" data-teacher-subject="subject-0"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>ปฐมวัย</span></div><div class="person-card-copy"><span class="person-role">ปฐมวัย</span><h3>ครูชื่อ–นามสกุล</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ครุศาสตรบัณฑิต<small>สาขาการศึกษาปฐมวัย</small></p></div></div></article>
-        <article class="person-card" data-teacher-subject="subject-1"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>ไทย</span></div><div class="person-card-copy"><span class="person-role">ภาษาไทย</span><h3>ครูชื่อ–นามสกุล</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ครุศาสตรบัณฑิต<small>สาขาภาษาไทย</small></p></div></div></article>
-        <article class="person-card" data-teacher-subject="subject-2"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>คณิต</span></div><div class="person-card-copy"><span class="person-role">คณิตศาสตร์</span><h3>ครูชื่อ–นามสกุล</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ครุศาสตรบัณฑิต<small>สาขาคณิตศาสตร์</small></p></div></div></article>
-        <article class="person-card" data-teacher-subject="subject-3"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>วิทย์</span></div><div class="person-card-copy"><span class="person-role">วิทยาศาสตร์และเทคโนโลยี</span><h3>ครูชื่อ–นามสกุล</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>วิทยาศาสตรบัณฑิต<small>สาขาวิทยาศาสตร์</small></p></div></div></article>
-        <article class="person-card" data-teacher-subject="subject-4"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>สังคม</span></div><div class="person-card-copy"><span class="person-role">สังคมศึกษา ศาสนาและวัฒนธรรม</span><h3>ครูชื่อ–นามสกุล</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ครุศาสตรบัณฑิต<small>สาขาสังคมศึกษา</small></p></div></div></article>
-        <article class="person-card" data-teacher-subject="subject-5"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>สุขศึกษา</span></div><div class="person-card-copy"><span class="person-role">สุขศึกษาและพลศึกษา</span><h3>ครูชื่อ–นามสกุล</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ศึกษาศาสตรบัณฑิต<small>สาขาพลศึกษา</small></p></div></div></article>
-        <article class="person-card" data-teacher-subject="subject-6"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>ศิลปะ</span></div><div class="person-card-copy"><span class="person-role">ศิลปะ</span><h3>ครูชื่อ–นามสกุล</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ครุศาสตรบัณฑิต<small>สาขาศิลปศึกษา</small></p></div></div></article>
-        <article class="person-card" data-teacher-subject="subject-7"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>อาชีพ</span></div><div class="person-card-copy"><span class="person-role">การงานอาชีพ</span><h3>ครูชื่อ–นามสกุล</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ศึกษาศาสตรบัณฑิต<small>สาขาการงานอาชีพ</small></p></div></div></article>
-        <article class="person-card" data-teacher-subject="subject-8"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>ภาษา</span></div><div class="person-card-copy"><span class="person-role">ภาษาต่างประเทศ</span><h3>ครูชื่อ–นามสกุล</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ศิลปศาสตรบัณฑิต<small>สาขาภาษาอังกฤษ</small></p></div></div></article>
+      <div class="teacher-toolbar"><label for="teacherSubject">เลือกกลุ่มสาระ</label><select id="teacherSubject" data-teacher-filter><option value="all">ทุกกลุ่มสาระ</option><option value="subject-0">ปฐมวัย</option><option value="subject-1">ภาษาไทย</option><option value="subject-2">คณิตศาสตร์</option><option value="subject-3">วิทยาศาสตร์และเทคโนโลยี</option><option value="subject-4">สังคมศึกษาและประวัติศาสตร์</option><option value="subject-5">สุขศึกษาและพลศึกษา</option><option value="subject-6">ศิลปะ</option><option value="subject-7">ภาษาต่างประเทศ</option><option value="subject-8">คอมพิวเตอร์และวิทยาการคำนวณ</option><option value="subject-9">ภาษาจีน</option></select><span data-teacher-count aria-live="polite">12 คน</span></div>
+      <div class="personnel-grid personnel-grid-teachers">
+        <article class="person-card" data-teacher-subject="subject-1"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>ไทย</span></div><div class="person-card-copy"><span class="person-role">ภาษาไทย</span><h3>นางนงนุช อวรัญ</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ปริญญาตรี บริหารรัฐกิจ<small>ประกาศนียบัตร สาขาวิชาการบริหารการศึกษา</small></p></div></div></article>
+        <article class="person-card" data-teacher-subject="subject-1"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>ไทย</span></div><div class="person-card-copy"><span class="person-role">ภาษาไทย</span><h3>นางสาวอินทร์อรนาถ สายทิ้ง</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ครุศาสตรบัณฑิต<small>สาขาวิชาภาษาไทย</small></p></div></div></article>
+        <article class="person-card" data-teacher-subject="subject-2"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>คณิต</span></div><div class="person-card-copy"><span class="person-role">คณิตศาสตร์</span><h3>นายณัฐกร อำพันทอง</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ครุศาสตรบัณฑิต<small>สาขาวิชาคณิตศาสตร์</small></p></div></div></article>
+        <article class="person-card" data-teacher-subject="subject-3"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>วิทย์</span></div><div class="person-card-copy"><span class="person-role">วิทยาศาสตร์</span><h3>นางสาวลลิตา แย้มเทศ</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ครุศาสตรบัณฑิต<small>สาขาวิชาวิทยาศาสตร์ทั่วไป</small></p></div></div></article>
+        <article class="person-card" data-teacher-subject="subject-4"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>สังคม</span></div><div class="person-card-copy"><span class="person-role">สังคมศึกษาและประวัติศาสตร์</span><h3>รอข้อมูลผู้สอน</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ยังไม่ระบุ<small>รอข้อมูลจากโรงเรียน</small></p></div></div></article>
+        <article class="person-card" data-teacher-subject="subject-5"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>สุขศึกษา</span></div><div class="person-card-copy"><span class="person-role">สุขศึกษาและพลศึกษา</span><h3>นายวชิระ ภู่เมือง</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ครุศาสตรบัณฑิต<small>สาขาวิชาพลศึกษา</small></p></div></div></article>
+        <article class="person-card" data-teacher-subject="subject-6"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>ศิลปะ</span></div><div class="person-card-copy"><span class="person-role">ศิลปะ</span><h3>นายมาโนช กระจ่างพันธิ์</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ศิลปบัณฑิต<small>สาขาวิชาเครื่องปั้นดินเผา</small></p></div></div></article>
+        <article class="person-card" data-teacher-subject="subject-7"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>ภาษา</span></div><div class="person-card-copy"><span class="person-role">ภาษาต่างประเทศ</span><h3>นางสาวบุญสิตา บัวกลม</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>การศึกษาบัณฑิต<small>เอกภาษาอังกฤษ</small></p><p>ศิลปศาสตรบัณฑิต<small>เอกภาษาอังกฤษ</small></p></div></div></article>
+        <article class="person-card" data-teacher-subject="subject-8"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>คอมฯ</span></div><div class="person-card-copy"><span class="person-role">คอมพิวเตอร์และวิทยาการคำนวณ</span><h3>นายณัฐวุฒิ แย้มแสง</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ครุศาสตรบัณฑิต<small>สาขาวิชาคอมพิวเตอร์และเทคโนโลยีการศึกษา</small></p></div></div></article>
+        <article class="person-card" data-teacher-subject="subject-9"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>จีน</span></div><div class="person-card-copy"><span class="person-role">ภาษาจีน</span><h3>นางสาวพรนภัส ชังคะนาก</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>มนุษยศาสตรบัณฑิต<small>วิชาเอกภาษาจีน วิชาโทภาษาอังกฤษ</small></p></div></div></article>
+        <article class="person-card" data-teacher-subject="subject-0"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>ปฐมวัย</span></div><div class="person-card-copy"><span class="person-role">อนุบาล</span><h3>นางสาวจำนงค์ สันติเพชร</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>คหกรรมศาสตรบัณฑิต<small>พัฒนาการครอบครัวและเด็ก · การศึกษาปฐมวัย</small></p></div></div></article>
+        <article class="person-card" data-teacher-subject="subject-0"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>ปฐมวัย</span></div><div class="person-card-copy"><span class="person-role">อนุบาล</span><h3>นางมณีรัตน์ เรือนภู่</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ครุศาสตรบัณฑิต<small>สาขาวิชาภาษาไทย</small></p></div></div></article>
       </div>
     </section>
 
     <section class="personnel-group" aria-labelledby="supportTitle">
       <div class="personnel-group-heading">
         <h2 id="supportTitle">ทีมดูแลโรงเรียน</h2>
-        <span>2 ตำแหน่ง</span>
+        <span>3 ตำแหน่ง</span>
       </div>
       <div class="personnel-grid personnel-grid-support">
         <article class="person-card"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>แม่บ้าน</span></div><div class="person-card-copy"><h3>แม่บ้าน</h3><small>ดูแลความสะอาดและความเรียบร้อย</small></div></article>
         <article class="person-card"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>นักการ</span></div><div class="person-card-copy"><h3>นักการ</h3><small>ดูแลอาคารและพื้นที่โรงเรียน</small></div></article>
+        <article class="person-card"><div class="person-portrait personnel-avatar" aria-hidden="true"><span>ธุรการ</span></div><div class="person-card-copy"><span class="person-role">เจ้าหน้าที่ธุรการ</span><h3>นางสาววราภรณ์ ทิมประทุม</h3><div class="person-education"><span>วุฒิการศึกษา</span><p>ปริญญาตรี บริหารธุรกิจ<small>สาขาวิชาบริหารธุรกิจการบิน</small></p><p>ปริญญาโท<small>สาขาวิชาการสอนสังคมศึกษา</small></p></div></div></article>
       </div>
     </section>
   </section>
